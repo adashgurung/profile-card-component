@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px; /*(name and stats)*/
+}
+
+.main {
+  background-color: var(--dark-cyan);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* give the main parent div overflow hidden 
+  side side ko dekhindaina
+  */
+}
+
+.card {
+  border-radius: 20px;
+  background-color: rgb(235, 235, 235);
+  height: 80%;
+  width: 350px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.card-header {
+  background-image: url(images/bg-pattern-card.svg);
+  background-size: cover;
+  height: 130px;
+  /*  border-radius: 20px 20px 0 0; */
+}
+
+.image-holder img {
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: -50px auto 30px auto;
+  display: block;
+  height: auto;
+}
+
+.name-age {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  margin-bottom: 20px;
+  /* font-size: 20px; */ /*(name and stats)*/
+}
+
+.age {
+  font-weight: 200;
+  color: var(--dark-grayish-blue);
+  margin-left: 10px;
+}
+
+.city {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.age,
+.city,
+.value2 {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  opacity: 0.6;
+}
+
+.value1 {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.card-body {
+  padding: 0 30px;
+  border-bottom: 1.5px solid lightgray;
+  margin-bottom: 30px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  /* margin: 10px 40px 30px 50px; */
+}
+
+.value1 {
+  margin-bottom: 15px;
+}
+
+.value2 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 30px;
+}
+
+.circles .c1,
+.circles .c2 {
+  position: absolute;
+  animation: 2s circles forwards;
+  opacity: 0;
+}
+
+.circles .c1 {
+  top: -90%;
+  right: 45%;
+  transform: translate(-100px, -50px);
+}
+
+.circles .c2 {
+  bottom: -90%;
+  left: 45%;
+  transform: translate(-100px, -50px);
+}
+
+/* if the width exeeds 768 */
+@media (min-width: 768px) {
+  .circles .c2 {
+    bottom: -110%;
+    left: 45%;
+    transform: translate(-100px, -50px);
+  }
+}
+
+@keyframes circles {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+/* .top,
+.bottom {
+   position: relative;
+}
+
+.top {
+   top: -90%;
+  right: 45%;
+}
+
+.bottom {
+    bottom: -90%;
+  left: 45%;
+} */
+/* 
+.circle1,
+.circle2 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  top: -40%;
+  right: 55%;
+}
+.circle2 {
+  bottom: -40%;
+  left: 50%;
+}
+ */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
